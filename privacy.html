@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy — Shopify2CSV</title>
+  <meta name="description" content="Privacy policy for the Shopify2CSV browser extension. The extension processes public storefront product data locally and does not collect personal information.">
+  <link rel="canonical" href="https://codeyourwayup.github.io/shopify2csv/privacy.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1a1917;
+      --muted: #5c5852;
+      --line: #e6e4df;
+      --canvas: #f7f7f5;
+      --paper: #ffffff;
+      --teal: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      width: min(42rem, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+    header { padding: 2.5rem 0 1rem; }
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0 0 1.25rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+    .mark img { width: 2rem; height: 2rem; }
+    h1 {
+      margin: 0 0 0.4rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+    .meta { margin: 0; color: var(--muted); }
+    main {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.5rem 1.5rem 0.5rem;
+    }
+    h2 {
+      margin: 1.75rem 0 0.4rem;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+    p, li { margin: 0.4rem 0; }
+    ul { padding-left: 1.2rem; }
+    a { color: var(--teal); }
+    footer {
+      padding: 1.25rem 0 2.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="mark"><img src="favicon.svg" alt="">Shopify2CSV</p>
+    <h1>Privacy policy</h1>
+    <p class="meta">Effective 17 October 2026. Applies to version 0.1.0 and later of the Shopify2CSV browser extension.</p>
+  </header>
+  <main>
+    <h2>Who this covers</h2>
+    <p>Shopify2CSV is a browser extension published by the GitHub account <a href="https://github.com/codeyourwayup">codeyourwayup</a>. It exports public products from a Shopify storefront you already have open into a comma-separated values (CSV) file on your computer. It has no account, no developer server, and no paid tier.</p>
+
+    <h2>Information the extension does not collect</h2>
+    <p>The developer does not receive, store, sell, or share any information from your use of Shopify2CSV. In particular, the extension does not collect:</p>
+    <ul>
+      <li>Personally identifiable information</li>
+      <li>Health, financial, payment, or authentication information</li>
+      <li>Personal communications, location, web history, or user activity</li>
+      <li>Analytics, advertising identifiers, or crash reports</li>
+    </ul>
+    <p>There is no remote code, analytics script, or third-party service embedded in the extension.</p>
+
+    <h2>What happens on your device</h2>
+    <p>When you click the toolbar icon, the extension reads the address of that tab so it can talk to the store you are viewing. If you start an export, it reads that store’s public product feed inside the tab:</p>
+    <ul>
+      <li><code>/products.json</code> for the whole store</li>
+      <li><code>/collections.json</code> to list collections</li>
+      <li><code>/collections/{handle}/products.json</code> for one collection</li>
+    </ul>
+    <p>Those responses contain public catalog fields such as title, description, vendor, tags, variants, prices, and image addresses. The extension turns them into CSV rows in memory and downloads the file from the store tab. Fields the public feed does not include are left blank or filled with fixed import defaults. The extension does not read cookies, passwords, or the contents of other tabs.</p>
+    <p>A request is an ordinary same-origin request from the store page. Your browser may send that store the cookies it already holds for that site, the same way the page itself would. Those cookies go to the store, not to the developer, and the extension does not read them.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><code>activeTab</code> — temporary access to the tab where you click the icon.</li>
+      <li><code>scripting</code> — runs the fetch and the local download inside that tab.</li>
+    </ul>
+    <p>The extension does not request host permissions, storage, downloads, or content scripts. It does not keep a copy of an export after the download starts or the job ends. A paused export stays in memory for about 15 minutes, then is discarded or saved only as a local partial CSV if you still have the store tab open. Closing the browser can drop that in-memory job sooner.</p>
+
+    <h2>Stores and other sites</h2>
+    <p>Chrome Web Store and Microsoft Edge Add-ons have their own accounts and privacy practices for installing the extension. This policy covers Shopify2CSV itself. The store you export is a separate site; its privacy policy covers what that store does with requests your browser sends to it.</p>
+
+    <h2>Children</h2>
+    <p>Shopify2CSV is a storefront export tool. It is not directed at children, and it does not knowingly collect personal information from anyone.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated text and effective date will appear on this page. Continued use of a later version of the extension follows the policy in effect on that date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: <a href="https://github.com/codeyourwayup">github.com/codeyourwayup</a>.</p>
+  </main>
+  <footer>Shopify2CSV privacy policy. This page does not use cookies, analytics, or third-party resources.</footer>
+</body>
+</html>
